@@ -9,8 +9,7 @@ const MainContent = () => {
           <img
             src="/images/background.png"
             alt=""
-            className="mb-4 ml-[-50px]"
-            style={{ maxWidth: "280px" }}
+            className="mb-4 ml-[-50px] max-w-[280px]"
           />
           <div className="grid md:grid-cols-2 gap-1 items-center mt-10">
             <div>
@@ -111,88 +110,92 @@ const MainContent = () => {
         </div>
       </div>
 
-      <div className="text-center mt-40">
-        <h1 className="text-2xl font-bold text-purple-900">Testimonial</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 bg-cover bg-center bg-no-repeat p-8 relative">
-          <img
-            src="/images/BG testimonial.PNG"
-            alt="Background"
-            className="absolute inset-0 z-0 w-full h-full opacity-60"
-          />
-          <div className="grid md:flex gap-8 items-center mt-20">
-            <div className="relative flex-shrink-0 aspect-w-4 aspect-h-3">
-              <div
-                className="w-80 h-32 bg-center bg-cover"
-                style={{
-                  backgroundImage: `url("/images/BG testimonial1.PNG")`,
-                }}
-              >
-                <img
-                  src="/images/UMKM5.PNG"
-                  alt="Testimonial 1"
-                  className="w-32 h-32 mx-auto"
-                />
-              </div>
-              <div className="absolute inset-0 flex flex-col justify-center items-center">
-                <p className="text-sm font-semibold text-white text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                  voluptates distinctio magnam obcaecati minima asperiores
-                  laboriosam necessitatibus pariatur, cumque odit! Expedita
-                  perspiciatis maiores asperiores earum vero debitis aut impedit
-                  rem.
-                </p>
-                <p className="text-white mt-2">Tammara Timmy</p>
-              </div>
+      {/* Testimonials */}
+      <div className="flex flex-col items-center mt-32 px-12">
+        <h1 className="text-5xl font-bold absolute z-10 bg-gradient-to-b from-gray-400 to-white bg-clip-text text-transparent">
+          TESTIMONIAL
+        </h1>
+        <h2 className="text-3xl font-semibold mt-6 mb-8 text-center text-purple-900 absolute z-10">
+          Testimonial
+        </h2>
+        <div
+          className="grid md:grid-cols-3 gap-1 items-center mt-32 bg-cover bg-center min-h-screen"
+          style={{
+            backgroundImage: 'url("/images/BG testimonial.png")',
+          }}
+        >
+          {/* Testimonial 1 */}
+          <div
+            className="relative flex items-center bg-cover bg-center bg-no-repeat rounded-xl  bg-size-250 transform translate-x-[-90%] scale-150"
+            style={{
+              backgroundImage: `url('/images/BG testimonial1.png')`,
+            }}
+          >
+            <div className="w-1/3 h-full bg-cover bg-center rounded-xl">
+              <img
+                src="/images/UMKM5.png"
+                alt="Testimonial 1"
+                className="rounded-xl w-80 h-60 mx-auto"
+              />
             </div>
-
-            <div className="relative flex-shrink-0 aspect-w-4 aspect-h-3">
-              <div
-                className="w-32 h-32 bg-center bg-cover"
-                style={{
-                  backgroundImage: `url("/images/BG testimonial1.PNG")`,
-                }}
-              >
-                <img
-                  src="/images/UMKM5.PNG"
-                  alt="Testimonial 1"
-                  className="w-32 h-32 mx-auto"
-                />
-              </div>
-              <div className="absolute inset-0 flex flex-col justify-center items-center">
-                <p className="text-sm font-semibold text-white text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                  voluptates distinctio magnam obcaecati minima asperiores
-                  laboriosam necessitatibus pariatur, cumque odit! Expedita
-                  perspiciatis maiores asperiores earum vero debitis aut impedit
-                  rem.
-                </p>
-                <p className="text-white mt-2">Tammara Timmy</p>
-              </div>
+            <div className="w-2/3 p-4">
+              <h2 className="text-md font-semibold">John Doe</h2>
+              <p className="text-sm text-gray-500 mt-2">Owner, Resto A</p>
+              <p className="text-sm text-gray-500 mt-4 text-justify">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+                aperiam, adipisci eos pariatur soluta doloremque fuga
+                consectetur nemo accusamus quis?
+              </p>
             </div>
+          </div>
 
-            <div className="relative flex-shrink-0 aspect-w-4 aspect-h-3">
-              <div
-                className="w-80 h-32 bg-center bg-cover"
-                style={{
-                  backgroundImage: `url("/images/BG testimonial1.PNG")`,
-                }}
-              >
-                <img
-                  src="/images/UMKM5.PNG"
-                  alt="Testimonial 1"
-                  className="w-32 h-32 mx-auto"
-                />
-              </div>
-              <div className="absolute inset-0 flex flex-col justify-center items-center">
-                <p className="text-sm font-semibold text-white text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                  voluptates distinctio magnam obcaecati minima asperiores
-                  laboriosam necessitatibus pariatur, cumque odit! Expedita
-                  perspiciatis maiores asperiores earum vero debitis aut impedit
-                  rem.
-                </p>
-                <p className="text-white mt-2">Tammara Timmy</p>
-              </div>
+          {/* Testimonial 2 */}
+          <div
+            className="relative flex items-center bg-cover bg-center bg-no-repeat rounded-xl bg-size-250 scale-150"
+            style={{
+              backgroundImage: `url('/images/BG testimonial1.png')`,
+            }}
+          >
+            <div className="w-1/3 h-full bg-cover bg-center rounded-xl">
+              <img
+                src="/images/UMKM5.png"
+                alt="Testimonial 2"
+                className="rounded-xl w-80 h-60 mx-auto"
+              />
+            </div>
+            <div className="w-2/3 p-4">
+              <h2 className="text-md font-semibold">Jane Doe</h2>
+              <p className="text-sm text-gray-500 mt-2">Owner, Resto B</p>
+              <p className="text-sm text-gray-500 mt-4 text-justify">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+                aperiam, adipisci eos pariatur soluta doloremque fuga
+                consectetur nemo accusamus quis?
+              </p>
+            </div>
+          </div>
+
+          {/* Testimonial 3 */}
+          <div
+            className="relative flex items-center bg-cover bg-center bg-no-repeat rounded-xl bg-size-250 transform translate-x-[90%] scale-150"
+            style={{
+              backgroundImage: `url('/images/BG testimonial1.png')`,
+            }}
+          >
+            <div className="w-1/3 h-full bg-cover bg-center rounded-xl">
+              <img
+                src="/images/UMKM6.png"
+                alt="Testimonial 3"
+                className="rounded-xl w-80 h-60 mx-auto"
+              />
+            </div>
+            <div className="w-2/3 p-4">
+              <h2 className="text-md font-semibold">Joko Doe</h2>
+              <p className="text-sm text-gray-500 mt-2">Owner, Resto C</p>
+              <p className="text-sm text-gray-500 mt-4 text-justify">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+                aperiam, adipisci eos pariatur soluta doloremque fuga
+                consectetur nemo accusamus quis?
+              </p>
             </div>
           </div>
         </div>
