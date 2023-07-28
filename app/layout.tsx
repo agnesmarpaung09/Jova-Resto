@@ -4,6 +4,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 
 import Home from "./page";
+import Header from "./header";
 import MainContent from "./MainContent";
 import Footer from "./footer";
 
@@ -17,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Home />
-        <MainContent />
+        <Header />
+        {children}
         <Footer />
       </body>
     </html>
