@@ -1,56 +1,83 @@
 import React from "react";
+import { FaChevronDown } from "react-icons/fa"; // Impor ikon panah dari Heroicons
 
 const Header = () => {
   return (
-    <header className="relative flex items-center container mx-auto px-5 sm:px-7 py-3 lg:px-40">
-      <div className="flex items-center w-full">
-        <div className="logo mr-10">
-          <img src="images/LOGO.png" alt="Logo" className="w-30 h-8" />
+    <header className="relative flex items-center container ml-16 px-5 sm:px-7 py-3 lg:px-40">
+      <div className="flex items-center">
+        <div className="logo mr-8">
+          <img src="images/LOGO.png" alt="Logo" className="w-40 h-8" />
         </div>
-        <nav className="hidden lg:flex ml-2">
+        <nav className="hidden lg:flex">
           <ul className="flex space-x-6 justify-left">
-            <div style={{ marginBottom: "0px" }}>
-              <NavLink href="/beranda" className="text-lg font-bold text-black">
+            <li className="mb-2 md:mb-0">
+              <NavLink
+                href="/beranda"
+                className="text-lg font-semibold text-black"
+              >
                 Beranda
               </NavLink>{" "}
+            </li>
+            <li className="mb-2 md:mb-0">
               <NavLink
                 href="/features"
-                className="text-lg font-bold text-black"
+                className="text-lg font-semibold text-black"
               >
                 Fitur
               </NavLink>{" "}
-              <NavLink href="/harga" className="text-lg font-bold text-black">
+            </li>
+            <li className="mb-2 md:mb-0">
+              <NavLink
+                href="/harga"
+                className="text-lg font-semibold text-black"
+              >
                 Harga
               </NavLink>{" "}
-              <NavLink href="/harga" className="text-lg font-bold text-black">
-                Solusi Bisnis
+            </li>
+            <li className="mb-2 md:mb-0">
+              <NavLink
+                href="/harga"
+                className="text-lg font-semibold text-black"
+              >
+                Solusi Bisnis{" "}
+                <span className="group inline-block">
+                  <FaChevronDown
+                    className="inline-block ml-1 text-black group-hover:text-blue-500"
+                    size={20}
+                  />
+                </span>
               </NavLink>{" "}
-              <NavLink href="/faq" className="text-lg font-bold text-black">
+            </li>
+            <li className="mb-2 md:mb-0">
+              <NavLink href="/faq" className="text-lg font-semibold text-black">
                 FAQ
               </NavLink>{" "}
+            </li>
+            <li className="mb-2 md:mb-0">
               <NavLink
                 href="/hubungi-kami"
-                className="text-lg font-bold text-black"
+                className="text-lg font-semibold text-black"
               >
                 Hubungi Kami
               </NavLink>
-            </div>
+            </li>
           </ul>
         </nav>
+
         <nav className="hidden lg:flex ml-auto">
           <ul className="flex items-center">
-            <li className="mr-4">
-              <button className="text-black hover:text-gray-800 text-lg font-bold">
+            <li className="ml-4">
+              <button className="text-black text-lg font-semibold underline">
                 Log In
               </button>
             </li>
-            <li className="mr-4">
+            <li className="ml-4">
               <button className="bg-purple-800 text-white px-5 py-2 rounded-full mr-4 hover:bg-purple-700 text-md">
                 Coba Gratis
               </button>
             </li>
-            <li className="mr-4">
-              <select className="bg-white px-2 py-1 text-md">
+            <li className="ml-4">
+              <select className="bg-white ml-4 py-1 text-md">
                 <option value="id">ID</option>
                 <option value="en">EN</option>
               </select>
