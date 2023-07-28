@@ -51,17 +51,21 @@ const Header = () => {
         <nav className="hidden lg:flex ml-auto">
           <ul className="flex items-center">
             <li className="mr-4">
-              <button className="text-black text-lg underline">Log In</button>
+              <NavLink href="/login" className="text-black">
+                <button className="text-black text-lg underline">Log In</button>
+              </NavLink>
             </li>
             <li className="mr-2">
-              <button className="bg-purple-900 text-white px-5 py-2 rounded-full hover:bg-purple-700 text-lg">
-                Coba Gratis
-              </button>
+              <NavLink href="/login" className="">
+                <button className="bg-purple-900 text-white px-5 py-2 rounded-full hover:bg-purple-700 text-lg">
+                  Coba Gratis
+                </button>
+              </NavLink>
             </li>
             <li className="mr-2">
               <select className="bg-white ml-4 py-1 text-lg">
-                <option value="id">ID</option>
-                <option value="en">EN</option>
+                <option value="id">Indonesia</option>
+                <option value="en">English</option>
               </select>
             </li>
           </ul>
