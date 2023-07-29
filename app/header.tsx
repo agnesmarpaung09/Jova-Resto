@@ -11,34 +11,46 @@ const Header = () => {
         </div>
         <nav className="hidden lg:flex">
           <ul className="flex items-center">
-            <li className="mr-2 md:mb-0">
+            <li className="mr-4 md:mb-0">
               <Link
                 href="/beranda"
-                className="text-lg text-black hover:underline"
+                className="text-lg text-black hover:text-gray-500"
               >
                 Beranda
               </Link>{" "}
             </li>
-            <li className="mr-2 md:mb-0">
-              <Link href="/features" className="text-lg  text-black">
-                Fitur
+            <li className="mr-4 md:mb-0">
+              <Link
+                href="/features"
+                className="text-lg  text-black hover:text-gray-500"
+              >
+                Features
               </Link>{" "}
             </li>
-            <li className="mr-2 md:mb-0">
-              <Link href="/harga" className="text-lg  text-black">
+            <li className="mr-4 md:mb-0">
+              <Link
+                href="/harga"
+                className="text-lg  text-black hover:text-gray-500"
+              >
                 Harga
               </Link>{" "}
             </li>
-            <li className="mr-2 md:mb-0">
+            <li className="mr-4 md:mb-0">
               <DropdownMenu />
             </li>
-            <li className="mr-2 md:mb-0">
-              <Link href="/faq" className="text-lg text-black">
+            <li className="mr-4 md:mb-0">
+              <Link
+                href="/faq"
+                className="text-lg text-black hover:text-gray-500"
+              >
                 FAQ
               </Link>{" "}
             </li>
-            <li className="mr-2 md:mb-0">
-              <Link href="/hubungi-kami" className="text-lg  text-black">
+            <li className="mr-4 md:mb-0">
+              <Link
+                href="/hubungi-kami"
+                className="text-lg  text-black hover:text-gray-500"
+              >
                 Hubungi Kami
               </Link>
             </li>
@@ -47,20 +59,27 @@ const Header = () => {
 
         <nav className="hidden lg:flex ml-auto">
           <ul className="flex items-center">
+            <img
+              src="images/login.png" // Replace with the path to your login image
+              alt="Login"
+              className="w-4 h-4 mr-2"
+            />
             <li className="mr-4">
               <Link href="/login" className="text-black">
-                <button className="text-black text-lg underline">Log In</button>
+                <button className="text-black text-lg underline  hover:text-gray-500">
+                  Log In
+                </button>
               </Link>
             </li>
-            <li className="mr-2">
+            <li className="ml-2">
               <Link href="/login" className="">
                 <button className="bg-purple-900 text-white px-5 py-2 rounded-full hover:bg-purple-700 text-lg">
                   Coba Gratis
                 </button>
               </Link>
             </li>
-            <li className="mr-2">
-              <select className="bg-white ml-4 py-1 text-lg">
+            <li className="ml-2">
+              <select className="bg-white ml-4 py-1 text-lg  hover:text-gray-500">
                 <option value="id">Indonesia</option>
                 <option value="en">English</option>
               </select>

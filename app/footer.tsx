@@ -13,19 +13,25 @@ const Footer = () => {
           />
         </div>
         <div style={{ marginBottom: "0px" }}>
-          <Link href="/beranda" className="text-white">
+          <Link href="/beranda" className="mr-4 text-white hover:text-gray-500">
             Beranda
           </Link>{" "}
-          <Link href="/features" className="text-white">
+          <Link
+            href="/features"
+            className="mr-4 text-white hover:text-gray-500"
+          >
             Fitur
           </Link>{" "}
-          <Link href="/harga" className="text-white">
+          <Link href="/harga" className="mr-4 text-white hover:text-gray-500">
             Harga
           </Link>{" "}
-          <Link href="/faq" className="text-white">
+          <Link href="/faq" className="mr-4 text-white hover:text-gray-500">
             FAQ
           </Link>{" "}
-          <Link href="/hubungi-kami" className="text-white">
+          <Link
+            href="/hubungi-kami"
+            className="mr-4 text-white hover:text-gray-500"
+          >
             Hubungi Kami
           </Link>
         </div>

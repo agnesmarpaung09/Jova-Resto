@@ -13,13 +13,13 @@ const DropdownMenu = () => {
   return (
     <div className="relative">
       <button
-        className="text-lg text-black focus:outline-none"
+        className="text-lg text-black hover:text-gray-500 focus:outline-none"
         onClick={handleDropdownToggle}
       >
         Solusi Bisnis{" "}
         <span className="group inline-block">
           <FaChevronDown
-            className={`inline-block ml-1 text-black group-hover:text-blue-500 ${
+            className={`inline-block ml-1 text-black group-hover:text-gray-500 ${
               isDropdownOpen ? "transform rotate-180" : ""
             }`}
             size={20}
