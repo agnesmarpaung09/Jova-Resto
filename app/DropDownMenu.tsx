@@ -11,7 +11,7 @@ const DropdownMenu = () => {
   };
 
   return (
-    <div>
+    <div className="relative">
       <button
         className="text-lg text-black focus:outline-none"
         onClick={handleDropdownToggle}

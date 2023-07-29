@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -12,21 +13,21 @@ const Footer = () => {
           />
         </div>
         <div style={{ marginBottom: "0px" }}>
-          <NavLink href="/beranda" className="text-white">
+          <Link href="/beranda" className="text-white">
             Beranda
-          </NavLink>{" "}
-          <NavLink href="/features" className="text-white">
+          </Link>{" "}
+          <Link href="/features" className="text-white">
             Fitur
-          </NavLink>{" "}
-          <NavLink href="/harga" className="text-white">
+          </Link>{" "}
+          <Link href="/harga" className="text-white">
             Harga
-          </NavLink>{" "}
-          <NavLink href="/faq" className="text-white">
+          </Link>{" "}
+          <Link href="/faq" className="text-white">
             FAQ
-          </NavLink>{" "}
-          <NavLink href="/hubungi-kami" className="text-white">
+          </Link>{" "}
+          <Link href="/hubungi-kami" className="text-white">
             Hubungi Kami
-          </NavLink>
+          </Link>
         </div>
       </nav>
       <hr style={{ borderTop: "1px solid white", margin: "16px 0" }} />
@@ -34,11 +35,5 @@ const Footer = () => {
     </footer>
   );
 };
-
-const NavLink = ({ href, children, className }) => (
-  <a href={href} className={`text-black hover:text-blue-200 mx-2 ${className}`}>
-    {children}
-  </a>
-);
 
 export default Footer;
