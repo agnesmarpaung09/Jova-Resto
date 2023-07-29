@@ -5,7 +5,7 @@ const Home = () => {
     <>
       <div className="min-h-screen relative">
         <div
-          className="absolute inset-0 bg-cover bg-no-repeat bg-center w-full h-full object-contain"
+          className="absolute inset-0 bg-cover bg-no-repeat bg-center w-full h-full object-cover"
           style={{ backgroundImage: `url('/images/HOME1.png')` }}
         ></div>
         <div className="absolute inset-0 flex">
