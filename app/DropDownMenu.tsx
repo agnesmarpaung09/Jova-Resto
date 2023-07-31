@@ -34,7 +34,7 @@ const DropdownMenu = () => {
           <li>
             <Link
               href="/solusi-1"
-              className="block px-4 py-2 text-black hover:bg-blue-200"
+              className="block px-4 py-2 text-black hover:text-gray-500"
             >
               UMKM
             </Link>
@@ -42,7 +42,7 @@ const DropdownMenu = () => {
           <li>
             <Link
               href="/solusi-2"
-              className="block px-4 py-2 text-black hover:bg-blue-200"
+              className="block px-4 py-2 text-black hover:text-gray-500"
             >
               Restaurant
             </Link>
@@ -50,9 +50,9 @@ const DropdownMenu = () => {
           <li>
             <Link
               href="/solusi-2"
-              className="block px-4 py-2 text-black hover:bg-blue-200"
+              className="block px-4 py-2 text-black hover:text-gray-500"
             >
-              Coffe Shop
+              Coffee Shop
             </Link>
           </li>
         </ul>
