@@ -13,7 +13,7 @@ const DropdownMenu = () => {
   return (
     <div className="relative">
       <button
-        className="text-lg text-black hover:text-gray-500 focus:outline-none"
+        className="text-lg text-black hover:text-gray-500 focus:outline-none "
         onClick={handleDropdownToggle}
       >
         Solusi Bisnis{" "}
