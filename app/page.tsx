@@ -3,34 +3,28 @@ import React from "react";
 const Home = () => {
   return (
     <>
-      <div className="min-h-screen ">
+      <div className="min-h-screen flex item-center container mx-auto px-5 sm:px-7 pt-32 pb-16 lg:pb-20">
         <div
-          className="absolute inset-0 bg-cover bg-no-repeat bg-center w-full h-full object-cover"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url('/images/HOME1.png')`,
-            height: "103%",
           }}
         ></div>
         <div className="absolute inset-0 flex">
-          <div
-            id="home"
-            className="text-left mx-4 md:mx-16 lg:px-48 py-10 mt-24"
-          >
-            <h1 className="text-2xl font-bold mb-4 text-black">UMKM</h1>
-            <h2 className="text-5xl font-semibold mb-2 text-black">
-              Aplikasi kasir restoran yang
+          <div id="home" className="text-left mx-6 lg:px-48 py-10 mt-24 ">
+            <h1 className=" font-semibold text-black text-xl lg:text-3xl mb-4 ">
+              UMKM
+            </h1>
+            <h2 className=" text-black font-semibold text-3xl  lg:text-5xl  !leading-normal mb-3 ">
+              Aplikasi kasir restoran yang <br /> menjadi solusi modern untuk{" "}
               <br />
-              menjadi solusi modern untuk
-              <br className="mt-2" />
-              menghadapi tantangan
-              <br className="mt-2" />
+              menghadapi tantangan <br />
               bisnis kuliner
-              <br className="mt-2" />
             </h2>
-            <span className="text-lg text-black">
+            <span className="text-md lg:text-lg text-black">
               Jova Resto Membantu Untuk Memaksimalkan Potensi Usahamu.
             </span>
-            <button className="block mt-6 px-14 py-2 bg-purple-900 text-white rounded-full hover:bg-purple-700">
+            <button className="block bg-purple-900 text-white rounded-full hover:bg-purple-700 mt-6 px-8 lg:px-14 py-2">
               Hubungi Kami
             </button>
           </div>
@@ -38,29 +32,26 @@ const Home = () => {
       </div>
 
       {/* First Section */}
-      <div
-        id="first-section"
-        className="bg-gradient-to-b from-gray-200 to-white"
-      >
-        <div className="container mx-auto px-4 md:px-8 lg:px-40">
+      <div className="bg-gradient-to-b from-gray-200 to-white">
+        <div className="container mx-auto px-8 xl:px-24 2xl:px-36">
           <img
             src="/images/background.png"
             alt=""
-            className="mb-4 ml-[-50px] max-w-[280px]"
+            className="mb-4 ml-[-50px] max-w-[200px] lg:ml-[-70px] lg:max-w-[280px]"
           />
-          <div className="grid md:grid-cols-2 gap-1 items-center mt-10">
-            <div>
+          <div className="grid sm:grid-cols-2 gap-1 items-center lg:mt-10">
+            <div className="flex items-center justify-center 2xl:justify-start">
               <img
                 src="/images/UMKM1.PNG"
                 alt=""
-                className="rounded-xl w-100 h-72 lg:w-120 lg:h-90 mx-auto md:mx-0"
+                className="rounded-2xl w-80 h-48 lg:w-5/6 lg:h-full "
               />
             </div>
-            <div className="md:pl-8 lg:pl-12 scale-125">
-              <h1 className="text-4xl font-bold">
+            <div className="">
+              <h1 className="font-bold mt-6 text-xl md:text-2xl lg:text-3xl xl:text-4xl  text-center sm:text-left sm:ml-6 ">
                 Membantu anda dalam hal <br />
-                pencatatan stok, laporan <br className="mt-2" />
-                keuangan dan lain lain. <br className="mt-2" />
+                pencatatan stock, laporan <br className="mt-4" />
+                keuangan dan lain lain. <br className="mt-4" />
               </h1>
             </div>
           </div>
@@ -68,14 +59,16 @@ const Home = () => {
       </div>
 
       {/* Second Section */}
-      <div className="text-center mt-40">
-        <h1 className="text-5xl font-bold">Jova Resto hadir Untuk UMKM</h1>
+      <div className="text-center mt-20 px-8  lg:mt-40  ">
+        <h1 className="text-2xl lg:text-4xl 2xl:text-5xl font-bold">
+          Jova Resto hadir Untuk UMKM
+        </h1>
       </div>
 
       {/* Third Section */}
-      <div className="grid md:grid-cols-2 gap-8 items-center mt-20">
-        <div id="second-section" className="lg:pl-60 scale-110">
-          <h1 className="text-5xl font-bold mb-4">
+      <div className="grid sm:grid-cols-2 gap-8 items-center px-8  mt-20">
+        <div id="second-section" className="lg:pl-10 xl:pl-28 2xl:pl-48">
+          <h1 className="text-2xl lg:text-4xl xl:text-4xl   2xl:text-5xl font-bold mb-4">
             Kelola Bisnis Anda Baik <br />
             Offline Maupun Online <br className="mt-2" />
           </h1>
@@ -103,30 +96,27 @@ const Home = () => {
             </svg>
           </span>
         </div>
-        <div className="text-center">
-          <div className="grid justify-center">
-            <img
-              src="/images/UMKM2.PNG"
-              alt="Another Image"
-              className="mt-4 rounded-lg md:w-96 lg:w-120 mx-auto block md:mx-2 max-w-full lg:max-w-2xl"
-            />
-          </div>
+        <div className="grid justify-center">
+          <img
+            src="/images/UMKM2.PNG"
+            alt="Another Image"
+            className="rounded-2xl w-80 sm:w-auto md:w-72 lg:w-3/4 xl:w-96 mx-auto block  max-w-full lg:max-w-2xl"
+          />
         </div>
       </div>
 
       {/* Fourth Section */}
-      <div className="grid md:grid-cols-2 gap-8 items-center mt-28">
-        <div className="text-center">
-          <div className="grid justify-center">
-            <img
-              src="/images/UMKM3.PNG"
-              alt="Another Image"
-              className="mt-4 rounded-lg md:w-96 lg:w-120 mx-auto block md:mx-2 max-w-full lg:max-w-2xl scale-125"
-            />
-          </div>
+      <div className="grid sm:grid-cols-2 gap-8 px-8 items-center mt-28 lg:mt-36">
+        <div className="grid justify-center">
+          <img
+            src="/images/UMKM3.PNG"
+            alt="Another Image"
+            className="rounded-2xl w-96 h-72 sm:w-auto sm:h-64 lg:w-auto lg:h-96"
+          />
         </div>
-        <div className="lg:pr-60 text-left scale-110">
-          <h1 className="text-5xl font-bold mb-4">
+
+        <div className="lg:pr-10 xl:pr-28 2xl:pr-60 text-left ">
+          <h1 className="text-2xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-bold mb-4">
             Pengelolaan Inventaris Dan Stok <br className="mt-2" />
           </h1>
           <p className="text-md text-gray-500 tracking-wider text-justify">
@@ -155,9 +145,9 @@ const Home = () => {
       </div>
 
       {/* Fifth Section */}
-      <div className="grid md:grid-cols-2 gap-8 items-center mt-36">
-        <div className="lg:pl-60 scale-110">
-          <h1 className="text-5xl font-bold mb-4">
+      <div className="grid sm:grid-cols-2 gap-8 px-8 items-center mt-28 lg:mt-32">
+        <div className="lg:pl-10 xl:pl-28 2xl:pl-48  ">
+          <h1 className="text-2xl lg:text-4xl  xl:text-4xl 2xl:text-5xl  font-bold mb-4 ">
             Melihat Laporan Transaksi Dan Penjualan
             <br className="mt-2" />
           </h1>
@@ -189,7 +179,7 @@ const Home = () => {
             <img
               src="/images/UMKM4.PNG"
               alt="Another Image"
-              className="mt-4 rounded-lg md:w-96 lg:w-120 mx-auto block md:mx-2 max-w-full lg:max-w-2xl scale-125"
+              className="mt-4 rounded-2xl sm:w-auto sm:h-72 md:w-96 lg:w-auto lg:h-96 mx-auto block md:mx-2 max-w-full lg:max-w-2xl "
             />
           </div>
         </div>
@@ -214,7 +204,7 @@ const Home = () => {
         >
           {/* Testimonial 1 */}
           <div
-            className="relative flex items-center bg-center bg-no-repeat rounded-xl -left-3/4 scale-150"
+            className="relative flex items-center bg-center bg-no-repeat rounded-xl -left-3/4 "
             style={{
               backgroundImage: `url('/images/BG testimonial1.png')`,
             }}
@@ -243,12 +233,12 @@ const Home = () => {
 
           {/* Testimonial 2 */}
           <div
-            className="relative flex items-center  bg-center bg-no-repeat rounded-xl scale-150 "
+            className="relative flex items-center  bg-center bg-no-repeat rounded-xl  "
             style={{
               backgroundImage: `url('/images/BG testimonial1.png')`,
             }}
           >
-            <div className="w-1/3 h-full bg-cover bg-center rounded-xl">
+            <div className="w-1/3 h-full bg-cover bg-center  rounded-xl">
               <img
                 src="/images/UMKM5.png"
                 alt="Testimonial 2"
@@ -273,7 +263,7 @@ const Home = () => {
 
           {/* Testimonial 3 */}
           <div
-            className="relative flex items-center bg-center bg-no-repeat rounded-xl -right-3/4 scale-150"
+            className="relative flex items-center bg-center bg-no-repeat rounded-xl -right-3/4"
             style={{
               backgroundImage: `url('/images/BG testimonial1.png')`,
             }}
@@ -303,12 +293,12 @@ const Home = () => {
       </div>
 
       {/* Contact Section */}
-      <div className="grid md:grid-cols-2 gap-8 items-center text-center mt-40">
-        <div className="lg:pl-60">
+      <div className="grid md:grid-cols-2 gap-8 items-center text-center px-8 mt-40">
+        <div className="lg:pl-48">
           <img
             src="images/CONTACT.png"
             alt="Image description"
-            className="w-80 h-80 object-contain "
+            className="w-auto h-96 object-contain "
           />
         </div>
         <div id="fourth-section" className="lg:pr-60 text-left">
