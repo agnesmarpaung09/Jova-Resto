@@ -1,0 +1,131 @@
+"use client";
+import React from "react";
+import Slider from "react-slick";
+
+const Testimonial = () => {
+  const dataTestimoni = [
+    {
+      image: "/images/UMKM5.png",
+      logo: "LOGO",
+      name: "Tammara Timmy",
+      busines: "Owner, Resto A",
+      description:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odioquibusdam, facilis maiores voluptates alias labore nequerepellendus ipsum quos deserunt ut dolor, tempora expedita atque aperiam cumque est corrupti quod, suscipit autem. Non quia    eveniet harum quam omnis commodi debitis corporis aut est delectus vel, esse corrupti saepe consectetur facilis impedit   temporibus odio amet nihil",
+    },
+    {
+      image: "/images/UMKM6.png",
+      logo: "LOGO",
+      name: "John Doe ",
+      busines: "Owner, Resto B",
+      description:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odioquibusdam, facilis maiores voluptates alias labore nequerepellendus ipsum quos deserunt ut dolor, tempora expedita atque aperiam cumque est corrupti quod, suscipit autem. Non quia    eveniet harum quam omnis commodi debitis corporis aut est delectus vel, esse corrupti saepe consectetur facilis impedit   temporibus odio amet nihil",
+    },
+    {
+      image: "/images/UMKM5.png",
+      logo: "LOGO",
+      name: "Tammara Timmy",
+      busines: "Owner, Resto C",
+      description:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odioquibusdam, facilis maiores voluptates alias labore nequerepellendus ipsum quos deserunt ut dolor, tempora expedita atque aperiam cumque est corrupti quod, suscipit autem. Non quia    eveniet harum quam omnis commodi debitis corporis aut est delectus vel, esse corrupti saepe consectetur facilis impedit   temporibus odio amet nihil",
+    },
+    {
+      image: "/images/UMKM6.png",
+      logo: "LOGO",
+      name: "John Doe ",
+      busines: "Owner, Resto D",
+      description:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odioquibusdam, facilis maiores voluptates alias labore nequerepellendus ipsum quos deserunt ut dolor, tempora expedita atque aperiam cumque est corrupti quod, suscipit autem. Non quia    eveniet harum quam omnis commodi debitis corporis aut est delectus vel, esse corrupti saepe consectetur facilis impedit   temporibus odio amet nihil",
+    },
+    {
+      image: "/images/UMKM5.png",
+      logo: "LOGO",
+      name: "Tammara Timmy",
+      busines: "Owner, Resto E",
+      description:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odioquibusdam, facilis maiores voluptates alias labore nequerepellendus ipsum quos deserunt ut dolor, tempora expedita atque aperiam cumque est corrupti quod, suscipit autem. Non quia    eveniet harum quam omnis commodi debitis corporis aut est delectus vel, esse corrupti saepe consectetur facilis impedit   temporibus odio amet nihil",
+    },
+    {
+      image: "/images/UMKM6.png",
+      logo: "LOGO",
+      name: "John Doe ",
+      busines: "Owner, Resto F",
+      description:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Odioquibusdam, facilis maiores voluptates alias labore nequerepellendus ipsum quos deserunt ut dolor, tempora expedita atque aperiam cumque est corrupti quod, suscipit autem. Non quia    eveniet harum quam omnis commodi debitis corporis aut est delectus vel, esse corrupti saepe consectetur facilis impedit   temporibus odio amet nihil",
+    },
+  ];
+
+  const sliderSettings = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  return (
+    <div className="flex flex-col items-center mt-28 xl:mt-36 ">
+      <h1 className="text-3xl md:text-4 xl:text-5xl font-bold absolute z-10 bg-gradient-to-b from-gray-400 to-white bg-clip-text text-transparent">
+        TESTIMONIAL
+      </h1>
+      <h2 className=" text-xl md:text-2xl xl:text-3xl font-semibold mt-4 xl:mt-6 mb-8 text-center text-purple-900 absolute z-10">
+        Testimonial
+      </h2>
+      <div
+        className="grid grid-cols-1 items-center mt-28 bg-cover min-h-screen"
+        style={{
+          backgroundImage: 'url("/images/BG testimonial.png")',
+        }}
+      >
+        <Slider {...sliderSettings}>
+          {dataTestimoni.map((row, index) => (
+            <div key={index} className="flex items-center mb-32">
+              <div className="flex bg-white rounded-2xl shadow-2xl mr-16 items-center">
+                <div className=" w-1/3 h-full bg-cover bg-center rounded-xl">
+                  <img
+                    src={row.image}
+                    alt={`Testimonial ${index + 1}`}
+                    className="rounded-2xl w-72 h-80 mx-auto shadow-xl"
+                  />
+                </div>
+
+                <div className=" w-2/3 p-4 mx-6 ">
+                  <h2 className="text-xl font-semibold text-purple-800">
+                    {row.logo}
+                  </h2>
+                  <h2 className="text-md font-semibold mt-2">{row.name}</h2>
+                  <li className="text-xs text-gray-500 ml-2 mt-2">
+                    {row.busines}
+                  </li>
+                  <p className="text-sm text-gray-500 mt-2 text-justify">
+                    {row.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </div>
+  );
+};
+
+export default Testimonial;
