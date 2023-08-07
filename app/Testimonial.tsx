@@ -55,25 +55,14 @@ const Testimonial = () => {
   ];
 
   const sliderSettings = {
-    infinite: false,
-    speed: 500,
+    className: "center",
+    centerMode: true,
+    infinite: true,
     slidesToShow: 2,
-    slidesToScroll: 2,
+    speed: 500,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 480,
+        breakpoint: 639,
         settings: {
           slidesToShow: 1,
         },
@@ -90,7 +79,7 @@ const Testimonial = () => {
         Testimonial
       </h2>
       <div
-        className="grid grid-cols-1 items-center mt-28 bg-cover min-h-screen"
+        className="grid grid-cols-1 items-center mt-28 bg-cover  min-h-screen "
         style={{
           backgroundImage: 'url("/images/BG testimonial.png")',
         }}
@@ -98,24 +87,25 @@ const Testimonial = () => {
         <Slider {...sliderSettings}>
           {dataTestimoni.map((row, index) => (
             <div key={index} className="flex items-center mb-32">
-              <div className="flex bg-white rounded-2xl shadow-2xl mr-16 items-center">
-                <div className=" w-1/3 h-full bg-cover bg-center rounded-xl">
+              <div className="xl:flex bg-white rounded-2xl shadow-2xl xl:w-auto xl:h-80 mr-10 sm:mr-8 md:mr-16 lg:mr-28 xl:mr-8 2xl:mr-12 items-center ">
+                <div className=" xl:w-1/3 h-full bg-cover bg-center rounded-xl">
                   <img
                     src={row.image}
                     alt={`Testimonial ${index + 1}`}
-                    className="rounded-2xl w-72 h-80 mx-auto shadow-xl"
+                    className="rounded-2xl shadow-xl w-full h-96 sm:w-full sm:h-80"
                   />
                 </div>
-
-                <div className=" w-2/3 p-4 mx-6 ">
+                <div className=" xl:w-2/3 p-4 xl:p-0 mx-2 xl:mx-6 2xl:p-4">
                   <h2 className="text-xl font-semibold text-purple-800">
                     {row.logo}
                   </h2>
-                  <h2 className="text-md font-semibold mt-2">{row.name}</h2>
-                  <li className="text-xs text-gray-500 ml-2 mt-2">
+                  <h2 className=" text-lg sm:text-md font-semibold mt-2">
+                    {row.name}
+                  </h2>
+                  <li className="text-sm sm:text-xs text-gray-500 ml-2 mt-2">
                     {row.busines}
                   </li>
-                  <p className="text-sm text-gray-500 mt-2 text-justify">
+                  <p className="text-md sm:text-sm text-gray-500 mt-2 text-justify">
                     {row.description}
                   </p>
                 </div>

@@ -182,11 +182,9 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Testimonials */}
       <Testimonial />
 
-      {/* Contact Section */}
-      <div className="grid sm:grid-cols-2 gap-8 items-center text-center px-8 lg:px-20 xl:px-36 2xl:px-48 mt-32">
+      <div className="grid sm:grid-cols-2 gap-8 items-center text-center px-8 lg:px-20 xl:px-36 2xl:px-48 mt-6 md:mt-32">
         <div className="">
           <img
             src="images/CONTACT.png"
@@ -203,15 +201,31 @@ const Home = () => {
             Kamu Punya Banyak Pertanyaan Dan Ingin Tahu Banyak Tentang Fitur
             JOVARESTO Silahkan Hubungi Kami!.
           </p>
-          <div className="mt-2 2xl:mt-4 mb-4">
-            <p className="text-cyan-600">
-              <a href="tel:+1234567890" className="underline">
-                2300 580
-              </a>{" "}
-              <a href="mailto:info@example.com" className="underline">
-                support@jovaresto.com
-              </a>
-            </p>
+          <div className="mt-4">
+            <ul className="text-cyan-600">
+              <p className="flex flex-col md:flex-row md:items-center items-start">
+                <img
+                  src="images/telepon.png"
+                  alt="telepon"
+                  className="w-10 h-10 mr-2"
+                />
+                <a href="tel: 2300 580" className="underline font-semibold ">
+                  2300 580
+                </a>
+                <li className="ml-4"></li>
+                <img
+                  src="images\email.png"
+                  alt="email"
+                  className="w-10 h-10 mr-2"
+                />
+                <a
+                  href=" support@jovaresto.com"
+                  className="underline font-semibold"
+                >
+                  support@jovaresto.com
+                </a>
+              </p>
+            </ul>
           </div>
         </div>
       </div>
