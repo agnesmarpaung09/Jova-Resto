@@ -203,25 +203,27 @@ const Home = () => {
           </p>
           <div className="mt-4">
             <ul className="text-cyan-600">
-              <p className="flex flex-col md:flex-row md:items-center items-start">
-                <img
-                  src="images/telepon.png"
-                  alt="telepon"
-                  className="w-10 h-10 mr-2"
-                />
-                <a href="tel: 2300 580" className="underline font-semibold ">
+              <p className="flex flex-col lg:flex-row items-start">
+                <a
+                  href="tel: 2300 580"
+                  className="underline font-semibold flex items-center"
+                >
+                  <img
+                    src="images/telepon.png"
+                    alt="telepon"
+                    className="w-10 h-10 mr-4"
+                  />
                   2300 580
                 </a>
-                <li className="ml-4"></li>
-                <img
-                  src="images\email.png"
-                  alt="email"
-                  className="w-10 h-10 mr-2"
-                />
                 <a
-                  href=" support@jovaresto.com"
-                  className="underline font-semibold"
+                  href="mailto: support@jovaresto.com"
+                  className="underline font-semibold flex items-center mt-2 lg:mt-0 mb-4 md:mb-0 lg:ml-8"
                 >
+                  <img
+                    src="images\email.png"
+                    alt="email"
+                    className="w-10 h-10 mr-4"
+                  />
                   support@jovaresto.com
                 </a>
               </p>

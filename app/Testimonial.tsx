@@ -6,7 +6,7 @@ const Testimonial = () => {
   const dataTestimoni = [
     {
       image: "/images/UMKM5.png",
-      logo: "LOGO",
+
       name: "Tammara Timmy",
       busines: "Owner, Resto A",
       description:
@@ -14,7 +14,7 @@ const Testimonial = () => {
     },
     {
       image: "/images/UMKM6.png",
-      logo: "LOGO",
+
       name: "John Doe ",
       busines: "Owner, Resto B",
       description:
@@ -22,7 +22,7 @@ const Testimonial = () => {
     },
     {
       image: "/images/UMKM5.png",
-      logo: "LOGO",
+
       name: "Tammara Timmy",
       busines: "Owner, Resto C",
       description:
@@ -30,7 +30,7 @@ const Testimonial = () => {
     },
     {
       image: "/images/UMKM6.png",
-      logo: "LOGO",
+
       name: "John Doe ",
       busines: "Owner, Resto D",
       description:
@@ -38,7 +38,7 @@ const Testimonial = () => {
     },
     {
       image: "/images/UMKM5.png",
-      logo: "LOGO",
+
       name: "Tammara Timmy",
       busines: "Owner, Resto E",
       description:
@@ -46,7 +46,7 @@ const Testimonial = () => {
     },
     {
       image: "/images/UMKM6.png",
-      logo: "LOGO",
+
       name: "John Doe ",
       busines: "Owner, Resto F",
       description:
@@ -96,9 +96,6 @@ const Testimonial = () => {
                   />
                 </div>
                 <div className=" xl:w-2/3 p-4 xl:p-0 mx-2 xl:mx-6 2xl:p-4">
-                  <h2 className="text-xl font-semibold text-purple-800">
-                    {row.logo}
-                  </h2>
                   <h2 className=" text-lg sm:text-md font-semibold mt-2">
                     {row.name}
                   </h2>
