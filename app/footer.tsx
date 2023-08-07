@@ -8,42 +8,47 @@ const Footer = () => {
         <div>
           <img
             src="/images/LOGO2.png"
-            className="h-10 mr-6 font-bold text-3xl"
+            className="h-6 lg:h-10 lg:mr-3 font-bold text-3xl"
             alt="Logo"
           />
         </div>
-        <div style={{ marginBottom: "0px" }}>
-          <Link href="#home" className="mr-4 text-white hover:text-gray-500">
-            Beranda
-          </Link>{" "}
-          <Link
-            href="#first-section"
-            className="mr-4 text-white hover:text-gray-500"
-          >
-            Features
-          </Link>{" "}
-          <Link
-            href="#second-section"
-            className="mr-4 text-white hover:text-gray-500"
-          >
-            Harga
-          </Link>{" "}
-          <Link
-            href="#third-section"
-            className="mr-4 text-white hover:text-gray-500"
-          >
-            FAQ
-          </Link>{" "}
-          <Link
-            href="#fourth-section"
-            className="mr-4 text-white hover:text-gray-500"
-          >
-            Hubungi Kami
-          </Link>
+        <div className="flex mt-4 sm:mt-0">
+          <div className="flex flex-col sm:flex-row">
+            <Link
+              href="#home"
+              className="px-2 text-white text-sm hover:text-gray-500 sm:px-0 sm:mr-4"
+            >
+              Beranda
+            </Link>{" "}
+            <Link
+              href="#first-section"
+              className="px-2 text-white text-sm hover:text-gray-500 sm:px-0 sm:mr-4"
+            >
+              Features
+            </Link>{" "}
+            <Link
+              href="#second-section"
+              className="px-2 text-white text-sm hover:text-gray-500 sm:px-0 sm:mr-4"
+            >
+              Harga
+            </Link>{" "}
+            <Link
+              href="#third-section"
+              className="px-2 text-white text-sm hover:text-gray-500 sm:px-0 sm:mr-4"
+            >
+              FAQ
+            </Link>{" "}
+            <Link
+              href="#fourth-section"
+              className="px-2 text-white text-sm hover:text-gray-500 sm:px-0"
+            >
+              Hubungi Kami
+            </Link>
+          </div>
         </div>
       </nav>
       <hr style={{ borderTop: "1px solid white", margin: "16px 0" }} />
-      <p className="text-center text-sm">&copy; Copyright by JovaResto</p>
+      <p className="text-center text-xs">&copy; Copyright by JovaResto</p>
     </footer>
   );
 };

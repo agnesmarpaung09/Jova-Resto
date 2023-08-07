@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 
 const LanguageDropdown = () => {
@@ -15,7 +14,7 @@ const LanguageDropdown = () => {
   };
 
   return (
-    <div className="relative ml-4 py-1 text-lg">
+    <div className="relative ml-4 text-lg">
       <div
         className="relative cursor-pointer flex items-center"
         onClick={handleDropdownToggle}
@@ -29,16 +28,9 @@ const LanguageDropdown = () => {
           alt={selectedLanguage === "id" ? "Indonesia" : "Inggris"}
           className="w-6 h-4 mr-2"
         />
-        {isDropdownOpen && (
-          <span className="mr-2">
-            {selectedLanguage === "id" ? "ID" : "EN"}
-          </span>
-        )}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={`h-6 w-6 inline ${
-            isDropdownOpen ? "transform rotate-180" : ""
-          }`}
+          className="h-4 w-4 inline"
           fill="none"
           viewBox="0 0 24 24"
           stroke="white"
@@ -51,42 +43,40 @@ const LanguageDropdown = () => {
           />
         </svg>
       </div>
-      <div
-        className={`absolute left-0 top-8 w-full ${
-          isDropdownOpen ? "" : "hidden"
-        }`}
-      >
-        <ul className="bg-white border rounded-lg shadow-lg">
-          <li
-            data-value="id"
-            className={`px-4 py-2 cursor-pointer hover:bg-gray-100 ${
-              selectedLanguage === "id" ? "font-bold" : ""
-            }  flex items-center`}
-            onClick={handleLanguageChange}
-          >
-            <img
-              src="images/indonesia.png"
-              alt="Indonesia"
-              className="w-6 h-4 mr-2"
-            />
-            ID
-          </li>
-          <li
-            data-value="en"
-            className={`px-4 py-2 cursor-pointer hover:bg-gray-100 ${
-              selectedLanguage === "en" ? "font-bold" : ""
-            } flex items-center`}
-            onClick={handleLanguageChange}
-          >
-            <img
-              src="images/english.png"
-              alt="Inggris"
-              className="w-6 h-4 mr-2"
-            />
-            EN
-          </li>
-        </ul>
-      </div>
+      {isDropdownOpen && (
+        <div className="absolute left-0 top-8 w-full">
+          <ul className="bg-white border rounded-lg shadow-lg w-24 mt-2">
+            <li
+              data-value="id"
+              className={`px-4 py-2 cursor-pointer hover:text-gray-500 ${
+                selectedLanguage === "id" ? "" : ""
+              } flex items-center`}
+              onClick={handleLanguageChange}
+            >
+              <img
+                src="images/indonesia.png"
+                alt="Indonesia"
+                className="w-6 h-4 mr-2"
+              />
+              ID
+            </li>
+            <li
+              data-value="en"
+              className={`px-4 py-2 cursor-pointer hover:text-gray-500 ${
+                selectedLanguage === "en" ? "" : ""
+              } flex items-center`}
+              onClick={handleLanguageChange}
+            >
+              <img
+                src="images/english.png"
+                alt="Inggris"
+                className="w-6 h-4 mr-2"
+              />
+              EN
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

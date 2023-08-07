@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import DropdownMenu from "./DropDownMenu";
 import Link from "next/link";
 import { Popover, Transition } from "@headlessui/react";
@@ -8,13 +8,23 @@ import { Fragment } from "react";
 import LanguageDropdown from "./LanguageDropdown";
 
 const Header = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <header className="absolute top-0 left-0 w-full z-50">
       <Popover>
         <div className={"container mx-auto items-center px-6 py-3 h-20"}>
           <div className="flex items-center w-full sm:flex">
             <div className="logo mr-6">
-              <img src="images/LOGO.png" alt="Logo" className="w-40 h-8" />
+              <img
+                src="images/LOGO.png"
+                alt="Logo"
+                className="w-40 h-8 md:w-auto md:h-10"
+              />
             </div>
             <nav className="hidden sm:flex">
               <ul className="flex items-center">
@@ -84,49 +94,113 @@ const Header = () => {
             >
               <Popover.Panel
                 focus
-                className="absolute z-50 right-4 top-10 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg"
+                className="absolute z-50 right-1 top-10 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg"
               >
                 <div className="rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
-                  <div className="px-5 pt-5 pb-6">
+                  <div className="px-4 pt-3 pb-6">
                     <div className="-mr-2"></div>
                     <div className="mt-6">
-                      <nav className="grid gap-y-8">
+                      <nav className="grid gap-y-5">
                         <Link
                           href="#home"
-                          className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-2 text-sm text-gray-700"
+                          className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-1 text-sm text-gray-700"
                         >
                           Beranda
                         </Link>
                         <Link
                           href="#second-section"
-                          className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-2 text-sm text-gray-700"
+                          className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-1 text-sm text-gray-700"
                         >
                           Features
                         </Link>
                         <Link
                           href="#third-section"
-                          className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-2 text-sm text-gray-700"
+                          className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-1 text-sm text-gray-700"
                         >
                           Harga
                         </Link>
-                        <Link
-                          href="/solusi bisnis"
-                          className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-2 text-sm text-gray-700"
-                        >
-                          Solusi Bisnis
-                        </Link>
+                        <div id="/solusi bisnis" className="relative">
+                          <button
+                            className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-1 text-sm text-gray-700"
+                            onClick={handleDropdownToggle}
+                          >
+                            Solusi Bisnis{" "}
+                            <span className="group inline-block">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className={`h-4 w-4 inline`}
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="black"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                            </span>
+                          </button>
+                          {isDropdownOpen && (
+                            <ul
+                              className="absolute top-full left-0 bg-white border border-gray-200 py-2 mt-2 z-10  rounded-lg text-md w-36"
+                              onMouseLeave={() => setIsDropdownOpen(false)}
+                            >
+                              <li>
+                                <Link
+                                  href="/"
+                                  className="block px-4 py-1 text-sm text-black hover:text-gray-500"
+                                >
+                                  UMKM
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  href="/Restaurant"
+                                  className="block px-4 py-1 text-sm text-black hover:text-gray-500"
+                                >
+                                  Restoran
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  href="/CoffeeShop"
+                                  className="block px-4 py-1 text-sm text-black hover:text-gray-500"
+                                >
+                                  Coffee Shop
+                                </Link>
+                              </li>
+                            </ul>
+                          )}
+                        </div>
+
                         <Link
                           href="#fourth-section"
-                          className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-2 text-sm text-gray-700"
+                          className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-1 text-sm text-gray-700"
                         >
                           FAQ
                         </Link>
                         <Link
                           href="#fourth-section"
-                          className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-2 text-sm text-gray-700"
+                          className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-1 text-sm text-gray-700"
                         >
                           Hubungi Kami
                         </Link>
+                        <Link
+                          href="/"
+                          className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-1 text-sm underline text-gray-700"
+                        >
+                          Log In
+                        </Link>
+                        <Link href="/login" className="">
+                          <button className="bg-purple-900 text-white px-5 py-1 rounded-full hover:bg-purple-700 text-sm">
+                            Coba Gratis
+                          </button>
+                        </Link>
+                        <ul className=" px-3 py-1 rounded-full hover:bg-black shadow-lg w-24 mt-2">
+                          <LanguageDropdown />
+                        </ul>
                       </nav>
                     </div>
                   </div>
