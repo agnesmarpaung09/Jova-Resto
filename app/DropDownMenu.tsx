@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Restaurant from "./Restaurant/page"; // Impor komponen Restaurant
 import CoffeeShop from "./CoffeeShop/page";
+import { usePathname } from "next/navigation";
 
 const DropdownMenu = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -11,20 +12,31 @@ const DropdownMenu = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const params = usePathname();
+  console.log(params);
+
   return (
     <div className="relative">
       <button
-        className="text-lg text-black hover:text-gray-500 focus:outline-none "
+        className={`text-lg ${
+          params === "/Restaurant" || params === "/CoffeeShop"
+            ? "text-white"
+            : "text-black"
+        } hover:text-gray-500 focus:outline-none`}
         onClick={handleDropdownToggle}
       >
         Solusi Bisnis{" "}
         <span className="group inline-block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className={`h-4 w-4 inline`}
+            className={`h-4 w-4 inline ${
+              params === "/Restaurant" || params === "/CoffeeShop"
+                ? "text-white"
+                : "text-black"
+            }`} // Update the color class here
             fill="none"
             viewBox="0 0 24 24"
-            stroke="black"
+            stroke="currentColor" // Use "currentColor" to inherit text color
           >
             <path
               strokeLinecap="round"

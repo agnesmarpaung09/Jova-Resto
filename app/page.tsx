@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Testimonial from "./Testimonial";
 
 const Home = () => {
@@ -27,17 +28,16 @@ const Home = () => {
             <span className="text-md lg:text-lg text-black">
               Jova Resto Membantu Untuk Memaksimalkan Potensi Usahamu.
             </span>
-            <button className="block bg-purple-900 text-white rounded-full hover:bg-purple-700 mt-6 px-8 lg:px-14 py-2">
-              Hubungi Kami
-            </button>
+            <Link href="#hubungi-kami">
+              <button className=" block bg-purple-900 text-white rounded-full hover:bg-purple-700 mt-6 px-8 lg:px-14 py-2">
+                Hubungi Kami
+              </button>
+            </Link>
           </div>
         </div>
       </div>
 
-      <div
-        id="first-section"
-        className="bg-gradient-to-b from-gray-200 to-white "
-      >
+      <div id="features" className="bg-gradient-to-b from-gray-200 to-white ">
         <div className="container mx-auto px-8 lg:px-20 xl:px-36 2xl:px-28">
           <img
             src="/images/background.png"
@@ -70,7 +70,7 @@ const Home = () => {
       </div>
 
       <div className="grid sm:grid-cols-2 gap-8 items-center px-8  mt-20">
-        <div id="second-section" className="lg:pl-12 xl:pl-28 2xl:pl-40">
+        <div id="harga" className="lg:pl-12 xl:pl-28 2xl:pl-40">
           <h1 className="text-2xl lg:text-4xl xl:text-4xl   2xl:text-5xl font-bold mb-4">
             Kelola Bisnis Anda Baik <br />
             Offline Maupun Online <br className="mt-2" />
@@ -196,7 +196,7 @@ const Home = () => {
             className="w-auto h-96 object-contain "
           />
         </div>
-        <div id="fourth-section" className="text-left">
+        <div id="hubungi-kami" className="text-left">
           <div className="border-t-4  border-gray-300 pt-2 w-20"> </div>
           <h1 className="text-2xl sm:text-3xl font-bold text-purple-900 ">
             Ada Yang Bisa Kami Bantu?

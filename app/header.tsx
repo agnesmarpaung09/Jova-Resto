@@ -6,6 +6,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon } from "@heroicons/react/solid";
 import { Fragment } from "react";
 import LanguageDropdown from "./LanguageDropdown";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -14,66 +15,89 @@ const Header = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const params = usePathname();
+  console.log(params);
+
   return (
     <header className="absolute top-0 left-0 w-full z-50">
       <Popover>
-        <div className={"container mx-auto items-center px-6 py-3 h-20"}>
-          <div className="flex items-center w-full sm:flex">
-            <div className="logo mr-6">
+        <div className="container mx-auto items-center px-6 py-3 h-20">
+          <div className="flex items-center w-full md:flex">
+            <div className="logo mr-4">
               <img
                 src="images/LOGO.png"
                 alt="Logo"
-                className="w-40 h-8 md:w-auto md:h-10"
+                className="w-40 h-8 md:w-auto md:h-10 md:text-sm"
               />
             </div>
-            <nav className="hidden sm:flex">
+            <nav className="hidden md:flex">
               <ul className="flex items-center">
-                <li className="mr-6 md:mb-0">
+                <li className="mr-4 md:mb-0">
                   <Link
                     href="#home"
-                    className="text-lg text-black hover:text-gray-500"
+                    className={`text-lg ${
+                      params === "/Restaurant" || params === "/CoffeeShop"
+                        ? "text-white"
+                        : "text-black"
+                    } hover:text-gray-500`}
                   >
                     Beranda
                   </Link>{" "}
                 </li>
-                <li className="mr-6 md:mb-0">
+                <li className="mr-4 md:mb-0">
                   <Link
-                    href="#first-section"
-                    className="text-lg  text-black hover:text-gray-500"
+                    href="#features"
+                    className={`text-lg ${
+                      params === "/Restaurant" || params === "/CoffeeShop"
+                        ? "text-white"
+                        : "text-black"
+                    } hover:text-gray-500`}
                   >
                     Features
                   </Link>{" "}
                 </li>
-                <li className="mr-6 md:mb-0">
+                <li className="mr-4 md:mb-0">
                   <Link
-                    href="#second-section"
-                    className="text-lg  text-black hover:text-gray-500"
+                    href="#harga"
+                    className={`text-lg ${
+                      params === "/Restaurant" || params === "/CoffeeShop"
+                        ? "text-white"
+                        : "text-black"
+                    } hover:text-gray-500`}
                   >
                     Harga
                   </Link>{" "}
                 </li>
-                <li className="mr-6 md:mb-0">
+                <li className="mr-4 md:mb-0">
                   <DropdownMenu />
                 </li>
-                <li className="mr-6 md:mb-0">
+                <li className="mr-4 md:mb-0">
                   <Link
-                    href="#third-section"
-                    className="text-lg text-black hover:text-gray-500"
+                    href="#FAQ"
+                    className={`text-lg ${
+                      params === "/Restaurant" || params === "/CoffeeShop"
+                        ? "text-white"
+                        : "text-black"
+                    } hover:text-gray-500`}
                   >
                     FAQ
                   </Link>{" "}
                 </li>
-                <li className="mr-6 md:mb-0">
+                <li className="mr-4 md:mb-0">
                   <Link
-                    href="#fourth-section"
-                    className="text-lg  text-black hover:text-gray-500"
+                    href="#hubungi-kami"
+                    className={`text-lg ${
+                      params === "/Restaurant" || params === "/CoffeeShop"
+                        ? "text-white"
+                        : "text-black"
+                    } hover:text-gray-500`}
                   >
                     Hubungi Kami
                   </Link>
                 </li>
               </ul>
             </nav>
-            <div className="flex grow items-center justify-end sm:hidden">
+            <div className="flex grow items-center justify-end md:hidden">
               <Popover.Button
                 className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400
           hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
@@ -108,13 +132,13 @@ const Header = () => {
                           Beranda
                         </Link>
                         <Link
-                          href="#second-section"
+                          href="#features"
                           className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-1 text-sm text-gray-700"
                         >
                           Features
                         </Link>
                         <Link
-                          href="#third-section"
+                          href="#harga"
                           className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-1 text-sm text-gray-700"
                         >
                           Harga
@@ -176,13 +200,13 @@ const Header = () => {
                         </div>
 
                         <Link
-                          href="#fourth-section"
+                          href="#FAQ"
                           className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-1 text-sm text-gray-700"
                         >
                           FAQ
                         </Link>
                         <Link
-                          href="#fourth-section"
+                          href="#hubungi-kami"
                           className="focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 block px-4 py-1 text-sm text-gray-700"
                         >
                           Hubungi Kami
@@ -208,28 +232,38 @@ const Header = () => {
               </Popover.Panel>
             </Transition>
 
-            <nav className="hidden sm:block lg:flex ml-auto">
+            <nav className="lg:block hidden sm:block ml-auto">
               <ul className="flex items-center">
                 <img
-                  src="images/login.png" // Replace with the path to your login image
+                  src="images/login.png" // Ganti dengan path menuju gambar login Anda
                   alt="Login"
-                  className="w-4 h-4 mr-2"
+                  className={`w-4 h-4 mr-2 hidden md:block ${
+                    params === "/Restaurant" || params === "/CoffeeShop"
+                      ? "filter-white"
+                      : ""
+                  }`}
                 />
-                <li className="mr-4">
+                <li className="mr-4 hidden md:block">
                   <Link href="/login" className="text-black">
-                    <button className="text-black text-lg underline  hover:text-gray-500">
+                    <button
+                      className={`text-lg underline ${
+                        params === "/Restaurant" || params === "/CoffeeShop"
+                          ? "text-white"
+                          : "text-black"
+                      } hover:text-gray-500`}
+                    >
                       Log In
                     </button>
                   </Link>
                 </li>
-                <li className="ml-2">
+                <li className="ml-2 hidden md:block">
                   <Link href="/login" className="">
                     <button className="bg-purple-900 text-white px-5 py-2 rounded-full hover:bg-purple-700 text-lg">
                       Coba Gratis
                     </button>
                   </Link>
                 </li>
-                <li>
+                <li className="hidden md:block">
                   <LanguageDropdown />
                 </li>
               </ul>

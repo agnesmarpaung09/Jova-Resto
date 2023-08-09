@@ -71,10 +71,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div
-      id="third-section"
-      className="flex flex-col items-center mt-28 xl:mt-36 "
-    >
+    <div id="FAQ" className="flex flex-col items-center mt-28 xl:mt-36 ">
       <h1 className="text-3xl md:text-4 xl:text-5xl font-bold absolute z-10 bg-gradient-to-b from-gray-400 to-white bg-clip-text text-transparent">
         TESTIMONIAL
       </h1>
