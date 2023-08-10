@@ -239,14 +239,15 @@ const Header = () => {
             <nav className="lg:block hidden sm:block ml-auto">
               <ul className="flex items-center">
                 <img
-                  src="images/login.png"
-                  alt="Login"
-                  className={`w-4 h-4 mr-2 hidden md:block ${
+                  src={
                     params === "/Restaurant" || params === "/CoffeeShop"
-                      ? "filter-white"
-                      : ""
-                  }`}
+                      ? "/images/login-white.png"
+                      : "/images/login.png"
+                  }
+                  alt="Login"
+                  className="w-4 h-4 mr-2 hidden md:block"
                 />
+
                 <li className="mr-4 hidden md:block">
                   <Link href="/login" className="text-black">
                     <button
