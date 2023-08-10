@@ -25,7 +25,11 @@ const Header = () => {
           <div className="flex items-center w-full md:flex">
             <div className="logo mr-4">
               <img
-                src="images/LOGO.png"
+                src={
+                  params === "/Restaurant" || params === "/CoffeeShop"
+                    ? "/images/LOGO2.png"
+                    : "/images/LOGO.png"
+                }
                 alt="Logo"
                 className="w-40 h-8 md:w-auto md:h-10 md:text-sm"
               />
@@ -235,7 +239,7 @@ const Header = () => {
             <nav className="lg:block hidden sm:block ml-auto">
               <ul className="flex items-center">
                 <img
-                  src="images/login.png" // Ganti dengan path menuju gambar login Anda
+                  src="images/login.png"
                   alt="Login"
                   className={`w-4 h-4 mr-2 hidden md:block ${
                     params === "/Restaurant" || params === "/CoffeeShop"
