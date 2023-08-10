@@ -18,14 +18,14 @@ function restaurant() {
             id="home"
             className="text-left mx-6 lg:px-12 xl:px-28 2xl:px-48 py-10 mt-24 "
           >
-            <h1 className=" font-semibold text-black text-xl sm:text-2xl lg:text-3xl mb-4 ">
+            <h1 className=" font-semibold text-white text-xl sm:text-2xl lg:text-3xl mb-4 ">
               Restoran
             </h1>
-            <h2 className="text-black font-semibold text-3xl sm:text-4xl lg:text-5xl mb-3 w-full md:w-[500px] lg:w-[700px]">
+            <h2 className="text-white font-semibold text-3xl sm:text-4xl lg:text-5xl mb-3 w-full md:w-[500px] lg:w-[700px]">
               Menuju Keunggulan Kompetitif dengan JovaResto: Aplikasi Restoran
               yang Membawa Perubahan Positif pada Bisnis Anda
             </h2>
-            <span className="text-md lg:text-lg text-black">
+            <span className="text-md lg:text-lg text-white">
               Jova Resto Membantu Untuk Memaksimalkan Potensi Usahamu.
             </span>
             <Link href="#hubungi-kami">
